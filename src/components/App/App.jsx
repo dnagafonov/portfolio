@@ -1,11 +1,15 @@
 import React from 'react';
+import Header from '../header/header';
+import DividerGray from '../divider/_gray/divider_gray';
+
+import './app.scss';
 
 const App = () => {
-
     return(
-        <main className="app">
-
-        </main>
+        <div className="app">
+            <Header />
+            <DividerGray />
+        </div>
     );
 }
 

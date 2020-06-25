@@ -1,6 +1,8 @@
+@import '@scss/const.scss';
+
 .header {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    font-weight: inherit;
+    font-weight: $bold;
 }
