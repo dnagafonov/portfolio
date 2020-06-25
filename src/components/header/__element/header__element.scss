@@ -1,0 +1,12 @@
+@import '@scss/constants.scss';
+
+.header__element {
+    padding: 30px 10px;
+    color: $gray;
+    cursor: pointer;
+    transition: $transition;
+}
+
+.header__element:hover {
+    color: $black;
+}

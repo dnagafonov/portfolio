@@ -5,6 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const isDev = process.env.NODE_ENV === 'development';
 
@@ -37,24 +38,35 @@ const cssLoaders = extra => {
     return loaders;  
 }
 
-module.exports = {
-    context: path.resolve(__dirname, 'src'),
-    mode: 'development',
-    entry: ['@babel/polyfill', './index.js'],
-    output: {
-        filename: !isDev ? '[name].[chunkhash].js' : '[name].[hash].js',
-        path: path.resolve(__dirname, 'dist')
-    },
-    optimization: optimization(),
-    resolve: {
-        extensions:['.js', '.json']
-    },
-    devtool: isDev ? 'source-map' : '',
-    devServer: {
-        port: 8080,
-        hot: isDev
-    },
-    plugins: [
+const babelLoader = preset => {
+    let loader = {
+        loader: 'babel-loader',
+        options: {
+            presets:[
+                '@babel/preset-env'
+            ],
+            plugins: [
+                '@babel/plugin-proposal-class-properties'
+            ]
+        }
+    }
+    if(preset)
+        loader.options.presets.push(preset);
+    return loader;
+}
+
+const jsLoader = (preset) => {
+    let loaders = [babelLoader(preset)]
+
+    if (isDev) {
+        loaders.push('eslint-loader')
+    }
+
+    return loaders
+}
+
+const plugins = () => {
+    let base = [
         new HTMLWebpackPlugin({
             template: '../public/index.html',
             minify: {
@@ -73,7 +85,36 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css'
         })
-    ],
+    ];
+
+
+    if(!isDev)
+        base.push(new BundleAnalyzerPlugin())
+    return base;
+}
+
+module.exports = {
+    context: path.resolve(__dirname, 'src'),
+    mode: 'development',
+    entry: ['@babel/polyfill', './index.jsx'],
+    output: {
+        filename: !isDev ? '[name].[chunkhash].js' : '[name].[hash].js',
+        path: path.resolve(__dirname, 'dist')
+    },
+    optimization: optimization(),
+    resolve: {
+        extensions:['.js', '.json', '.jsx'],
+        alias: {
+            '@': path.resolve(__dirname, 'src'),
+            '@scss': path.resolve(__dirname, 'src/scss')
+        }
+    },
+    devtool: isDev ? 'source-map' : '',
+    devServer: {
+        port: 8080,
+        hot: isDev
+    },
+    plugins: plugins(),
     module: {
         rules:[
             {
@@ -95,33 +136,12 @@ module.exports = {
             { 
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets:[
-                            '@babel/preset-env'
-                        ],
-                        plugins: [
-                            '@babel/plugin-proposal-class-properties'
-                        ]
-                    }
-                }
+                loader: jsLoader()
             },
-            { 
+            {
                 test: /\.jsx$/,
                 exclude: /node_modules/,
-                loader: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets:[
-                            '@babel/preset-env',
-                            '@babel/preset-react'
-                        ],
-                        plugins: [
-                            '@babel/plugin-proposal-class-properties'
-                        ]
-                    }
-                }
+                loader: babelLoader('@babel/preset-react')
             }
         ]
     }
