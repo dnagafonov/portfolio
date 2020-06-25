@@ -103,7 +103,11 @@ module.exports = {
     },
     optimization: optimization(),
     resolve: {
-        extensions:['.js', '.json']
+        extensions:['.js', '.json', '.jsx'],
+        alias: {
+            '@': path.resolve(__dirname, 'src'),
+            '@scss': path.resolve(__dirname, 'src/scss')
+        }
     },
     devtool: isDev ? 'source-map' : '',
     devServer: {
