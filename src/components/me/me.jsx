@@ -3,6 +3,7 @@ import Layout3 from '../layout-3/layout-3';
 import SelectLanguage from '../select-language/select-language';
 
 import './me.scss';
+import MePhoto from './__photo/me__photo';
 
 const Me = () => (
     <article className="me">
@@ -14,6 +15,7 @@ const Me = () => (
             </div>
             <SelectLanguage />
         </Layout3>
+        <MePhoto />
     </article>
 );
 
