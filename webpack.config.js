@@ -126,7 +126,7 @@ module.exports = {
                 use: cssLoaders('sass-loader')
             },
             {
-                test: /\.(png|jpeg|svg|gif)$/,
+                test: /\.(png|jpeg|svg|gif|jpg)$/,
                 use: ['file-loader']
             },
             {

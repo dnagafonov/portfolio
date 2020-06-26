@@ -1,8 +1,8 @@
 @import '@scss/const.scss';
 
-.header {
+.layout-3 {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-between;
-    font-weight: $bold;
+    align-items: center;
 }

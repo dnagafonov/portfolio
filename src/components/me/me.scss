@@ -1,0 +1,19 @@
+@import '@scss/const.scss';
+
+.me {
+    font-size: $fs-text;
+
+    .layout-3 {
+        height: 120px;
+        padding: 40px 0;
+    }
+
+    &__name {
+        width: 300px;
+        font-size: $fs-h1;
+    }
+
+    &__info {
+        width: 300px;
+    }
+}
