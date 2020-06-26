@@ -1,8 +1,11 @@
 @import '@scss/const.scss';
 
-body {
+* {
     margin: 0;
     padding: 0;
+}
+
+body {
     text-decoration: none;
     font-family: 'Gilroy';
     font-weight: $regular;
