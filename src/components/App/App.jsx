@@ -4,6 +4,7 @@ import DividerGray from '../divider/_gray/divider_gray';
 import Me from '../me/me';
 
 import './app.scss';
+import AboutMe from '../about-me/about-me';
 
 const App = () => {
     return(
@@ -11,6 +12,7 @@ const App = () => {
             <Header />
             <DividerGray />
             <Me />
+            <AboutMe />
         </div>
     );
 }

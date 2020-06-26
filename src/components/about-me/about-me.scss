@@ -1,0 +1,23 @@
+@import '@scss/const.scss';
+
+.about-me {
+    width: 100%;
+    background-color: $gray-light;
+
+    & .h2 {
+        max-width: 200px;
+    }
+
+    .about-me__wrapper {
+        width: 1000px;
+        padding: 110px 0;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+
+        .h2 {
+            margin-bottom: 20px;
+        }
+    }
+}

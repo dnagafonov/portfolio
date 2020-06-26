@@ -1,0 +1,11 @@
+.about-me__notes {
+    max-width: 500px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    & .about-me__note {
+        margin: 10px 0;
+    }
+}
