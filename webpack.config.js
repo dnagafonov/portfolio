@@ -106,7 +106,8 @@ module.exports = {
         extensions:['.js', '.json', '.jsx'],
         alias: {
             '@': path.resolve(__dirname, 'src'),
-            '@scss': path.resolve(__dirname, 'src/scss')
+            '@scss': path.resolve(__dirname, 'src/scss'),
+            '@assets': path.resolve(__dirname, 'src/assets')
         }
     },
     devtool: isDev ? 'source-map' : '',

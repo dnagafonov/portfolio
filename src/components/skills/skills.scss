@@ -1,18 +1,15 @@
 @import '@scss/const.scss';
 
-.about-me {
-    width: 100%;
-    background-color: $color-secondary;
-
-    & .wrapper {
+.skills {
+    .wrapper {
         padding: $cont-pad;
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
         align-items: center;
-
+    
         .h2 {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
     }
 }

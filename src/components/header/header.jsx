@@ -5,7 +5,7 @@ import './header.scss';
 
 const Header = () => {
     const links = [
-        { name: "Home", to: "home" },
+        { name: "Home", to: "me" },
         { name: "About me", to: "about-me" },
         { name: "Skills", to: "skills" },
         { name: "Portfolio", to: "portfolio" },
