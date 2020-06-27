@@ -1,0 +1,10 @@
+.project {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+    & .link {
+        margin-top: 40px;
+    }
+}

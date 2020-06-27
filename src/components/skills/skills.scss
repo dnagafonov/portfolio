@@ -1,7 +1,8 @@
-.skills {
+@import '@scss/const.scss';
 
+.skills {
     & .wrapper {
-        padding: 110px 0;
+        padding: $cont-pad;
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
@@ -10,7 +11,5 @@
         .h2 {
             margin-bottom: 30px;
         }
-
-        
     }
 }

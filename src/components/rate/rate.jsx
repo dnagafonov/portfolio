@@ -8,7 +8,7 @@ import './rate.scss';
 const Rate = ({stars}) => {
     return(
         <section className="rate">
-            {getArrayForStars(stars).map(e => e ? <img className="star__active" src={Star}/> : <img className="star" src={Star}/>)}
+            {getArrayForStars(stars).map((e, i) => e ? <img className="star__active" key={i} src={Star}/> : <img className="star" key={i} src={Star}/>)}
         </section>
     )
 }

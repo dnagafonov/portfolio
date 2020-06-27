@@ -7,6 +7,7 @@ import AboutMe from '../about-me/about-me';
 import './app.scss';
 import '@scss/general.scss';
 import Skills from '../skills/skills';
+import Portfolio from '../portfolio/portfolio';
 
 const App = () => {
     return(
@@ -16,6 +17,7 @@ const App = () => {
             <Me />
             <AboutMe />
             <Skills />
+            <Portfolio />
         </div>
     );
 }
