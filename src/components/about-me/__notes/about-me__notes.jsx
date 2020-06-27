@@ -1,7 +1,7 @@
 import React from 'react';
+import AboutMeNote from '../__note/about-me__note';
 
 import './about-me__notes.scss';
-import AboutMeNote from '../__note/about-me__note';
 
 const AboutMeNotes = ({notes}) => (
     <section className="about-me__notes">

@@ -1,8 +1,12 @@
 @import '@scss/const.scss';
 
 .header {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    font-weight: $bold;
+    width: 100%;
+
+    .wrapper {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        font-weight: $bold;
+    }
 }

@@ -13,7 +13,9 @@ const Header = () => {
     ]
     return(
         <header className="header">
-            {links.map(e => <HeaderElement {...e} key={e.to} />)}
+            <div className="wrapper">
+                {links.map(e => <HeaderElement {...e} key={e.to} />)}
+            </div>
         </header>
     )
 }

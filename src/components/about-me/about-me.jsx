@@ -1,7 +1,7 @@
 import React from 'react';
+import AboutMeNotes from './__notes/about-me__notes';
 
 import './about-me.scss';
-import AboutMeNotes from './__notes/about-me__notes';
 
 const AboutMe = () => {
     const notes = [
@@ -10,7 +10,7 @@ const AboutMe = () => {
     ];
     return(
         <article id="#about-me" className="about-me">
-            <div className="about-me__wrapper">
+            <div className="wrapper about-me__wrapper">
                 <h2 className="h2">About me</h2>
                 <AboutMeNotes notes={notes}/>
             </div>

@@ -1,5 +1,7 @@
 @import '@scss/const.scss';
 
 .divider_gray {
-    background-color: $gray;
+    .wrapper {
+        background-color: $gray;
+    }
 }
