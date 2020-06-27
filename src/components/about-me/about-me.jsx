@@ -9,7 +9,7 @@ const AboutMe = () => {
         "Ready to implement excellent projects with wonderful people."
     ];
     return(
-        <article id="#about-me" className="about-me">
+        <article className="about-me">
             <div className="wrapper about-me__wrapper">
                 <h2 className="h2">About me</h2>
                 <AboutMeNotes notes={notes}/>
