@@ -1,0 +1,1 @@
+export const getArrayForStars = num => Array(5).fill(0).reduce(prev => ({ count: prev.count -= 1, arr: prev.count > 0 ? [...prev.arr, 1] : [...prev.arr, 0] }), {count: num + 1, arr: []}).arr;

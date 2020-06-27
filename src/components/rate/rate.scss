@@ -1,0 +1,12 @@
+.rate {
+    width: 170px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
+
+    & .star {
+        opacity: 0.1;
+    }
+}

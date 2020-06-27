@@ -6,6 +6,7 @@ import AboutMe from '../about-me/about-me';
 
 import './app.scss';
 import '@scss/general.scss';
+import Skills from '../skills/skills';
 
 const App = () => {
     return(
@@ -14,6 +15,7 @@ const App = () => {
             <DividerGray />
             <Me />
             <AboutMe />
+            <Skills />
         </div>
     );
 }

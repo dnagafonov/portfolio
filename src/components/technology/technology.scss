@@ -1,0 +1,13 @@
+.technology {
+    width: 170px;
+    height: 200px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    &__photo {
+        width: 80px;
+        height: 80px;
+    }
+}
