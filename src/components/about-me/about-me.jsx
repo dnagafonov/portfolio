@@ -1,7 +1,6 @@
 import React from 'react';
 import AboutMeNotes from './__notes/about-me__notes';
-
-import './about-me.scss';
+import SecondaryContainer from '../containers/secondary-container/secondary-container';
 
 const AboutMe = () => {
     const notes = [
@@ -10,10 +9,10 @@ const AboutMe = () => {
     ];
     return(
         <article className="about-me">
-            <div className="wrapper about-me__wrapper">
+            <SecondaryContainer>
                 <h2 className="h2">About me</h2>
                 <AboutMeNotes notes={notes}/>
-            </div>
+            </SecondaryContainer>
         </article>
     )
 }

@@ -1,26 +1,11 @@
 @import '@scss/const.scss';
 
 .portfolio {
-    width: 100%;
-    background-color: $color-secondary;
+    .project {
+            margin-bottom: 100px;
+    }
 
-    .wrapper {
-        padding: $cont-pad;
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        align-items: center;
-
-        .h2 {
-            margin-bottom: 30px;
-        }
-
-        .project {
-            margin-bottom: 40px;
-        }
-
-        .project:last-child {
+    .project:last-child {
             margin-bottom: 0;
-        }
     }
 }

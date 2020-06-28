@@ -8,6 +8,7 @@ import './app.scss';
 import '@scss/general.scss';
 import Skills from '../skills/skills';
 import Portfolio from '../portfolio/portfolio';
+import Contacts from '../contacts/contacts';
 
 const App = () => {
     return(
@@ -18,6 +19,7 @@ const App = () => {
             <AboutMe />
             <Skills />
             <Portfolio />
+            <Contacts />
         </div>
     );
 }

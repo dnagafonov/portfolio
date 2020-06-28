@@ -1,8 +1,9 @@
 import React from 'react';
 import Autoservice from '@assets/autoservice.png';
+import PortfolioProjects from './__projects/portfolio__projects';
+import SecondaryContainer from '../containers/secondary-container/secondary-container';
 
 import './portfolio.scss';
-import PortfolioProjects from './__projects/portfolio__projects';
 
 const Portfolio = () => {
     const projects = [
@@ -10,10 +11,10 @@ const Portfolio = () => {
     ];
     return(
         <article className="portfolio">
-            <div className="wrapper">
+            <SecondaryContainer>
                 <h2 className="h2">Portfolio</h2>
                 <PortfolioProjects projects={projects} />
-            </div>
+            </SecondaryContainer>
         </article>
     )
 }
