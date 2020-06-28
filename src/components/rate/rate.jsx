@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Star from '@assets/star.svg';
+import Star from '@assets/images/star.svg';
 import {getArrayForStars} from '../../tools/getArrayForStars';
 
 import './rate.scss';

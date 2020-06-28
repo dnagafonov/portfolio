@@ -78,7 +78,7 @@ const plugins = () => {
             patterns: [
                 {
                     from: path.resolve(__dirname, 'public/favicon.ico'),
-                    to: path.resolve(__dirname, 'dist')
+                    to: path.resolve(__dirname, 'build')
                 }
             ]
         }),
@@ -99,7 +99,7 @@ module.exports = {
     entry: ['@babel/polyfill', './index.jsx'],
     output: {
         filename: !isDev ? '[name].[chunkhash].js' : '[name].[hash].js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'build')
     },
     optimization: optimization(),
     resolve: {

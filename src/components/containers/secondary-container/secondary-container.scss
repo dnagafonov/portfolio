@@ -1,13 +1,16 @@
 @import '@scss/const.scss';
 
-.skills {
+.secondary-container {
+    width: 100%;
+    background-color: $color-secondary;
+
     .wrapper {
         padding: $cont-pad;
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
         align-items: center;
-    
+
         .h2 {
             margin-bottom: 30px;
         }

@@ -8,7 +8,7 @@ import './project.scss';
 const Project = ({name, link, path}) => (
     <article className="project">
         <ProjectPhoto name={name} path={path} />
-        <Link text={name} link={link} />
+        <Link link={link} >{name}</Link>
     </article>
 );
 

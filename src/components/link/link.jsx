@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 
 import './link.scss';
 
-const Link = ({text, link}) => <a className="link" href={link} target="_blank">{text}</a>
+const Link = ({className = "", children, link}) => <a className={`${className} link`} href={link} target='_blank'>{children}</a>
 
 Link.proptypes = {
     name: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired
+    children: PropTypes.node.isRequired,
+    className: PropTypes.string
 };
 
 export default Link;
