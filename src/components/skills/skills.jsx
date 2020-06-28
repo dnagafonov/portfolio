@@ -1,8 +1,8 @@
 import React from 'react';
-import ReactSVG from '@assets/react.svg';
-import ReduxSVG from '@assets/redux.svg';
-import NodeSVG from '@assets/node.svg';
-import FigmaSVG from '@assets/figma.svg';
+import ReactSVG from '@assets/images/react.svg';
+import ReduxSVG from '@assets/images/redux.svg';
+import NodeSVG from '@assets/images/node.svg';
+import FigmaSVG from '@assets/images/figma.svg';
 import SkillNotes from './__notes/skills__notes';
 import PrimaryContainer from '../containers/primary-container/primary-container';
 

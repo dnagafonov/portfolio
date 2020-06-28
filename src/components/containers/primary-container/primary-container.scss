@@ -1,13 +1,13 @@
 @import '@scss/const.scss';
 
 .primary-container {
-        padding: $cont-pad;
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        align-items: center;
-    
-        .h2 {
-            margin-bottom: 30px;
-        }
+    padding: $cont-pad;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    .h2 {
+        margin-bottom: 30px;
+    }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './secondary-container.scss';
 
@@ -9,5 +10,9 @@ const SecondaryContainer = ({children}) => (
         </div>
     </div>
 );
+
+SecondaryContainer.proptypes = {
+    children: PropTypes.node.isRequired
+};
 
 export default SecondaryContainer;

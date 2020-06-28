@@ -1,5 +1,5 @@
 import React from 'react';
-import Autoservice from '@assets/autoservice.png';
+import Autoservice from '@assets/images/autoservice.png';
 import PortfolioProjects from './__projects/portfolio__projects';
 import SecondaryContainer from '../containers/secondary-container/secondary-container';
 
