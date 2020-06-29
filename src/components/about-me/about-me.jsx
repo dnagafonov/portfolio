@@ -1,20 +1,22 @@
 import React from 'react';
 import AboutMeNotes from './__notes/about-me__notes';
 import SecondaryContainer from '../containers/secondary-container/secondary-container';
+import PropTypes from 'prop-types'
 
-const AboutMe = () => {
-    const notes = [
-        "Hello, I'm Denis – JavaScript developer from Minsk. I'm interested in developing and everything connected with it.",
-        "Ready to implement excellent projects with wonderful people."
-    ];
+const AboutMe = ({ header, notes }) => {
     return(
         <article className="about-me">
             <SecondaryContainer>
-                <h2 className="h2">About me</h2>
+                <h2 className="h2">{header}</h2>
                 <AboutMeNotes notes={notes}/>
             </SecondaryContainer>
         </article>
     )
+}
+
+AboutMe.proptypes = {
+    notes: PropTypes.arrayOf(PropTypes.string).isRequired,
+    header: PropTypes.string.isRequired
 }
 
 export default AboutMe;
