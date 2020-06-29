@@ -1,3 +1,27 @@
+@import '@scss/const.scss';
+
 .select-language {
-    transform: rotate(0.75turn) translateY(25px);
+    transform: rotate(0.75turn) translateY(30px);
+    display: flex;
+
+    &__lang,
+    &__lang_active {
+        padding-right: 10px;
+        cursor: pointer;
+    }
+
+    &__lang {
+        color: $gray;
+    }
+    
+    &__lang_active {
+        color: $black;
+    }
+}
+
+.select-language::before {
+    content: "|";
+    position: relative;
+    left: 30px;
+    bottom: 2px;
 }

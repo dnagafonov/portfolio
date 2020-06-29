@@ -1,16 +1,10 @@
 import React from 'react';
 import HeaderElement from './__element/header__element';
+import PropTypes from 'prop-types'
 
 import './header.scss';
 
-const Header = () => {
-    const links = [
-        { name: "Home", to: "me" },
-        { name: "About me", to: "about-me" },
-        { name: "Skills", to: "skills" },
-        { name: "Portfolio", to: "portfolio" },
-        { name: "Contacts", to: "contacts" }
-    ]
+const Header = ({ links }) => {
     return(
         <header className="header">
             <div className="wrapper">
@@ -18,6 +12,13 @@ const Header = () => {
             </div>
         </header>
     )
+}
+
+Header.proptypes = {
+    links: PropTypes.arrayOf({
+        name: PropTypes.string.isRequired,
+        to: PropTypes.string.isRequired
+    }).isRequired
 }
 
 export default Header;

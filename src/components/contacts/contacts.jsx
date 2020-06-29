@@ -8,25 +8,31 @@ import NoteBackstage from '../note/__backstage/note__backstage';
 
 import './contacts.scss';
 
-const Contacts = () => {
+const Contacts = ({ header, note, button, noteBack, links }) => {
     return(
         <article className="contacts">
             <PrimaryContainer>
-                <h2 className="h2">Contacts</h2>
-                <Note>Want to know more or just chat? You are welcome!</Note>
-                <Button href="https://t.me/dnagafonov">Send message</Button>
-                <ContactsLinks />
-                <NoteBackstage>Visit my profiles on Github, Telegram, LinkedIn, Instagram</NoteBackstage>
+                <h2 className="h2">{header}</h2>
+                <Note>{note}</Note>
+                <Button href={button.href}>{button.msg}</Button>
+                <ContactsLinks links={links} />
+                <NoteBackstage>{noteBack}</NoteBackstage>
             </PrimaryContainer>
         </article>
     )
 }
 
 Contacts.proptypes = {
-    notes: PropTypes.arrayOf(PropTypes.exact({
-        name: PropTypes.string.isRequired,
-        path: PropTypes.string.isRequired,
-        link: PropTypes.string.isRequired
+    header: PropTypes.string.isRequired,    
+    note: PropTypes.string.isRequired,    
+    noteBack: PropTypes.string.isRequired,
+    button: PropTypes.exact({
+        href: PropTypes.string.isRequired,
+        msg: PropTypes.string.isRequired
+    }),
+    links: PropTypes.arrayOf(PropTypes.exact({
+        img: PropTypes.string.isRequired,
+        link: PropTypes.string.isRequired,
     })).isRequired
 }
 

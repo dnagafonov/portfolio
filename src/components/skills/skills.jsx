@@ -1,26 +1,26 @@
 import React from 'react';
-import ReactSVG from '@assets/images/react.svg';
-import ReduxSVG from '@assets/images/redux.svg';
-import NodeSVG from '@assets/images/node.svg';
-import FigmaSVG from '@assets/images/figma.svg';
 import SkillNotes from './__notes/skills__notes';
 import PrimaryContainer from '../containers/primary-container/primary-container';
+import PropTypes from 'prop-types'
 
-const Skills = () => {
-    const technologies = [
-        { name: "React", path: ReactSVG, stars: 4 },
-        { name: "Redux", path: ReduxSVG, stars: 4 },
-        { name: "NodeJS", path: NodeSVG, stars: 3 },
-        { name: "Figma", path: FigmaSVG, stars: 3 },
-    ];
+const Skills = ({ technologies, header }) => {
     return(
         <article className="skills">
             <PrimaryContainer>
-                <h2 className="h2">Skills</h2>
+                <h2 className="h2">{header}</h2>
                 <SkillNotes notes={technologies} />
             </PrimaryContainer>
         </article>
     )
+}
+
+Skills.proptypes = {
+    technologies: PropTypes.arrayOf({
+        name: PropTypes.string.isRequired,
+        path: PropTypes.string.isRequired,
+        stars: PropTypes.number.isRequired,
+    }),
+    header: PropTypes.string.isRequired
 }
 
 export default Skills;
