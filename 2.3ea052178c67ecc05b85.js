@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{366:function(e,a,n){},368:function(e,a,n){"use strict";n.r(a);var t=n(0),c=n.n(t);n(366);a.default=function(){return c.a.createElement("article",{className:"me__photo"},c.a.createElement("div",{className:"wrapper"}))}}}]);
