@@ -1,10 +1,12 @@
-import React, { useContext } from 'react';
+import React, { Suspense } from 'react';
 import Layout from '../layout/layout';
-import MePhoto from './__photo/me__photo';
 import SelectLanguageContainer from '../select-language/select-language-container';
+import Note from '../note/note';
 import PropTypes from 'prop-types'
 
 import './me.scss';
+
+const MePhoto = React.lazy(() => import('./__photo/me__photo'));
 
 const Me = ({name, info}) => {
     return(
@@ -17,7 +19,9 @@ const Me = ({name, info}) => {
                     </div>
                     <SelectLanguageContainer />
                 </Layout>
-                <MePhoto />
+                <Suspense fallback={<Note>Loading...</Note>}>
+                    <MePhoto />
+                </Suspense>
             </div>
         </article>
     );

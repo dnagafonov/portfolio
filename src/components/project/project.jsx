@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import PropTypes from 'prop-types';
-import ProjectPhoto from './__photo/project__photo';
 import Link from '../link/link';
 
 import './project.scss';
+import Note from '../note/note';
+
+const ProjectPhoto = React.lazy(() => import('./__photo/project__photo'));
 
 const Project = ({name, link, path}) => (
     <article className="project">
-        <ProjectPhoto name={name} path={path} />
+        <Suspense fallback={<Note>Loading...</Note>}>
+            <ProjectPhoto name={name} path={path} />
+        </Suspense>
         <Link link={link} >{name}</Link>
     </article>
 );
