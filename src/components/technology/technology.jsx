@@ -1,15 +1,14 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import TechnologyPhoto from './__photo/technology__photo';
 import TechnologyName from './__name/technology__name';
 import Rate from '../rate/rate';
-import Note from "../note/note";
-import './technology.scss';
 
-const TechnologyPhoto = React.lazy(() => import('./__photo/technology__photo'))
+import './technology.scss';
 
 const Technology = ({name, stars, path}) => (
     <article className="technology">
-        <Suspense fallback={<Note>Loading...</Note>}><TechnologyPhoto name={name} path={path} /></Suspense>
+        <TechnologyPhoto name={name} path={path} />
         <TechnologyName name={name} />
         <Rate stars={stars}/>
     </article>
