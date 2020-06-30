@@ -11,3 +11,20 @@ body {
     font-weight: $regular;
     font-size: $fs-text;
 }
+
+.app {
+    animation-name: app;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in;
+}
+
+@keyframes app {
+    0% {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
