@@ -4,7 +4,7 @@ import AboutMeContainer from '../about-me/about-me-container';
 import SkillsContainer from '../skills/skills-container';
 import PortfolioContainer from '../portfolio/portfolio-container';
 import ContactsContainer from '../contacts/contacts-container';
-import { reducer, init } from '../../store/reducer';
+import { reducer } from '../../store/reducer';
 import { LanguageContext } from '../../store/context';
 import MeContainer from '../me/me-container';
 import HeaderContainer from '../header/header-container';
