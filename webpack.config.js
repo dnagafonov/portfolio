@@ -89,7 +89,7 @@ const plugins = () => {
 
 
     if(!isDev)
-        base.push(new BundleAnalyzerPlugin())
+        //base.push(new BundleAnalyzerPlugin())
     return base;
 }
 
