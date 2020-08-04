@@ -3,7 +3,9 @@
 .select-language {
     transform: rotate(0.75turn) translateY(30px);
     display: flex;
-
+    position: absolute;
+    right: 0;
+    
     &__lang,
     &__lang_active {
         padding-right: 10px;
