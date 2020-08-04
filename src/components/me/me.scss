@@ -4,12 +4,14 @@
     font-size: $fs-text;
 
     .layout {
+        position: relative;
         height: 120px;
         padding: 40px 0;
     }
 
     &__name {
         width: 300px;
+        margin-bottom: 20px;
         font-size: $fs-h1;
     }
 

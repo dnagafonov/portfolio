@@ -7,9 +7,11 @@ import './header.scss';
 const Header = ({ links }) => {
     return(
         <header className="header">
-            <div className="wrapper">
-                {links.map(e => <HeaderElement {...e} key={e.to} />)}
-            </div>
+          <input class="menu-btn" type="checkbox" id="menu-btn" />
+          <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+          <div className="wrapper menu">
+              {links.map(e => <HeaderElement {...e} key={e.to} />)}
+          </div>
         </header>
     )
 }
