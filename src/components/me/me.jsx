@@ -17,6 +17,7 @@ const Me = ({name, info}) => {
                     <div className="me__info">
                         {info.map(e => <p key={e}>{e}</p>)}
                     </div>
+                    <div/> 
                     <SelectLanguageContainer />
                 </Layout>
                 <Suspense fallback={<Note>Loading...</Note>}>

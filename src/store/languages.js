@@ -35,13 +35,14 @@ export const languages = {
             technologies: [
                 { name: "React", path: ReactSVG, stars: 5 },
                 { name: "Redux", path: ReduxSVG, stars: 5 },
-                { name: "NodeJS", path: NodeSVG, stars: 4 },
+                { name: "NodeJS", path: NodeSVG, stars: 3 },
                 { name: "Figma", path: FigmaSVG, stars: 3 },
             ]
         },
         portfolio: {
             header: "Portfolio",
             projects: [
+                { name: "Upgrade PC", path: "https://i.ibb.co/n8tQfF8/img.png", link: "https://github.com/dnagafonov/upgrade-pc"},
                 { name: "Online autoservice store", path: Autoservice, link:"https://github.com/dnagafonov/coursework-kpiyap" }
             ]
         },
@@ -87,13 +88,14 @@ export const languages = {
             technologies: [
                 { name: "React", path: ReactSVG, stars: 5 },
                 { name: "Redux", path: ReduxSVG, stars: 5 },
-                { name: "NodeJS", path: NodeSVG, stars: 4 },
+                { name: "NodeJS", path: NodeSVG, stars: 3 },
                 { name: "Figma", path: FigmaSVG, stars: 3 },
             ]
         },
         portfolio: {
             header: "Портфолио",
             projects: [
+                { name: "Upgrade PC", path: "https://i.ibb.co/n8tQfF8/img.png", link: "https://github.com/dnagafonov/upgrade-pc"},
                 { name: "Онлайн магазин для заказа автозапчастей или автомобильных услуг", path: Autoservice, link:"https://github.com/dnagafonov/coursework-kpiyap" }
             ]
         },
