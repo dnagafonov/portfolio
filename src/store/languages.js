@@ -42,6 +42,8 @@ export const languages = {
         portfolio: {
             header: "Portfolio",
             projects: [
+                { name: "Currency chart", path: "https://i.ibb.co/7tgzdCQ/Screenshot-17.png", link: "https://github.com/dnagafonov/currency-checker"},
+                { name: "Forecast by location", path: "https://i.ibb.co/jLLc6N1/photo-2020-09-09-20-14-24.jpg", link: "https://github.com/dnagafonov/native-weather"},
                 { name: "Upgrade PC", path: "https://i.ibb.co/n8tQfF8/img.png", link: "https://github.com/dnagafonov/upgrade-pc"},
                 { name: "Online autoservice store", path: Autoservice, link:"https://github.com/dnagafonov/coursework-kpiyap" }
             ]
@@ -95,6 +97,8 @@ export const languages = {
         portfolio: {
             header: "Портфолио",
             projects: [
+                { name: "График валют", path: "https://i.ibb.co/7tgzdCQ/Screenshot-17.png", link: "https://github.com/dnagafonov/currency-checker"},
+                { name: "Прогноз погоды по местоположению", path: "https://i.ibb.co/jLLc6N1/photo-2020-09-09-20-14-24.jpg", link: "https://github.com/dnagafonov/native-weather"},
                 { name: "Upgrade PC", path: "https://i.ibb.co/n8tQfF8/img.png", link: "https://github.com/dnagafonov/upgrade-pc"},
                 { name: "Онлайн магазин для заказа автозапчастей или автомобильных услуг", path: Autoservice, link:"https://github.com/dnagafonov/coursework-kpiyap" }
             ]
